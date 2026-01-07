@@ -1,6 +1,12 @@
 hydra:
   searchpath:
     - pkg://verl.trainer.config
+  sweep:
+    dir: tuo_outputs/${trainer.experiment_name}/hydra/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  run:
+    dir: tuo_outputs/${trainer.experiment_name}/hydra/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  job:
+    chdir: False
 
 defaults:
   - ppo_trainer

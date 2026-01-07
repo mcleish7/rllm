@@ -99,7 +99,7 @@ class ChatTemplateParser:
                     return DeepSeekV32ExpChatTemplateParser(tokenizer, disable_thinking=disable_thinking)
                 else:
                     logger.info(f"Using DeepseekQwenChatTemplateParser for {tokenizer.name_or_path}")
-                    return DeepseekQwenChatTemplateParser(tokenizer, disable_thinking=disable_thinking)
+                    return DeepseekQwenChatTemplateParser(tokenizer)#, disable_thinking=disable_thinking)
             elif "qwen" in model_name or "r2e" in model_name or "deepswe" in model_name or "qwen" in tokenizer_cls:
                 logger.info(f"Using QwenChatTemplateParser for {tokenizer.name_or_path}")
                 return QwenChatTemplateParser(tokenizer, processor=processor, disable_thinking=disable_thinking)
