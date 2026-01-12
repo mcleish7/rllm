@@ -28,7 +28,6 @@ if [[ "$(hostname -s)" == "$MASTER_ADDR" ]] || [[ "$(hostname -f)" == "$MASTER_A
 
     # trainer.default_local_dir="tuo_outputs/${RUN_NAME}/checkpoints/\${trainer.project_name}/\${trainer.experiment_name}" \
     python3 -m examples.deepscaler.train_deepscaler \
-        +dataset.train_name="${DS_NAME}" \
         trainer.default_local_dir="tuo_outputs/${RUN_NAME}/checkpoints" \
         trainer.experiment_name="${RUN_NAME}" \
         algorithm.adv_estimator=grpo \

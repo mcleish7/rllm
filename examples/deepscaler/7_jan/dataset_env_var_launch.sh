@@ -36,7 +36,7 @@ if [[ "$(hostname -s)" == "$MASTER_ADDR" ]] || [[ "$(hostname -f)" == "$MASTER_A
         data.shuffle=False \
         data.train_batch_size=128 \
         data.val_batch_size=30 \
-        data.max_prompt_length=2048 \
+        data.max_prompt_length=4096 \
         data.max_response_length=8192 \
         actor_rollout_ref.model.path=$MODEL_PATH \
         actor_rollout_ref.hybrid_engine=True \
