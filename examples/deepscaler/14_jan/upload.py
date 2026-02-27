@@ -58,8 +58,29 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 # local_path = "/capstor/scratch/cscs/smcleish/rllm_daint_291_129_uenv_venv_rllm_2/tuo_outputs/eepscaler-1.5b-8k-easy-first-run-with-shuffle-8k-400-chkpt-16k-200-chkpt/deepscaler-1.5b-8k-step200-hf"
 # repo_name = "deepscaler-1.5b-8k-easy-first-run-with-shuffle-8k-400-chkpt-16k-200-chkpt-step-200"
 
-local_path = "/capstor/scratch/cscs/smcleish/rllm_daint_291_129_uenv_venv_rllm_2/tuo_outputs/deepscaler-1.5b-8k-hard-first-run-with-shuffle-8k-400-chkpt-16k-400-chkpt/deepscaler-1.5b-8k-step200-hf"
-repo_name = "deepscaler-1.5b-8k-hard-first-run-with-shuffle-8k-400-chkpt-16k-400-chkpt-step-200"
+# local_path = "/capstor/scratch/cscs/smcleish/rllm_daint_291_129_uenv_venv_rllm_2/tuo_outputs/deepscaler-1.5b-8k-hard-first-run-with-shuffle-8k-400-chkpt-16k-400-chkpt/deepscaler-1.5b-8k-step200-hf"
+# repo_name = "deepscaler-1.5b-8k-hard-first-run-with-shuffle-8k-400-chkpt-16k-400-chkpt-step-200"
+
+# local_path = "/capstor/scratch/cscs/smcleish/rllm_daint_291_129_uenv_venv_rllm_2/tuo_outputs/deepscaler-1.5b-8k-reproduce-first-run-with-shuffle-8k-400-chkpt/deepscaler-1.5b-8k-step300-hf"
+# repo_name = "deepscaler-1.5b-8k-reproduce-first-run-with-shuffle-8k-400-chkpt-step-300"
+
+# local_path = "/capstor/scratch/cscs/smcleish/rllm_daint_291_129_uenv_venv_rllm_2/tuo_outputs/deepscaler-1.5b-8k-reproduce-first-run-with-shuffle-8k-400-chkpt/deepscaler-1.5b-8k-step200-hf"
+# repo_name = "deepscaler-1.5b-8k-reproduce-first-run-with-shuffle-8k-400-chkpt-step-200"
+
+# local_path = "/capstor/scratch/cscs/smcleish/rllm_daint_291_129_uenv_venv_rllm_2/tuo_outputs/deepscaler-1.5b-8k-reproduce-first-run-with-shuffle-8k-400-chkpt/deepscaler-1.5b-8k-step100-hf"
+# repo_name = "deepscaler-1.5b-8k-reproduce-first-run-with-shuffle-8k-400-chkpt-step-100"
+
+# local_path = "/capstor/scratch/cscs/smcleish/rllm_daint_291_129_uenv_venv_rllm_2/tuo_outputs/deepscaler-1.5b-8k-reproduce-first-run-with-shuffle-8k-300-chkpt/deepscaler-1.5b-8k-step400-hf"
+# repo_name = "deepscaler-1.5b-8k-reproduce-first-run-with-shuffle-8k-300-chkpt-step-400"
+
+# local_path = "/capstor/scratch/cscs/smcleish/rllm_daint_291_129_uenv_venv_rllm_2/tuo_outputs/deepscaler-1.5b-8k-reproduce-first-run-with-shuffle-8k-300-chkpt/deepscaler-1.5b-8k-step300-hf"
+# repo_name = "deepscaler-1.5b-8k-reproduce-first-run-with-shuffle-8k-300-chkpt-step-300"
+
+# local_path = "/capstor/scratch/cscs/smcleish/rllm_daint_291_129_uenv_venv_rllm_2/tuo_outputs/deepscaler-1.5b-8k-reproduce-first-run-with-shuffle-8k-300-chkpt/deepscaler-1.5b-8k-step200-hf"
+# repo_name = "deepscaler-1.5b-8k-reproduce-first-run-with-shuffle-8k-300-chkpt-step-200"
+
+local_path = "/capstor/scratch/cscs/smcleish/rllm_daint_291_129_uenv_venv_rllm_2/tuo_outputs/deepscaler-1.5b-8k-reproduce-first-run-with-shuffle-8k-300-chkpt/deepscaler-1.5b-8k-step100-hf"
+repo_name = "deepscaler-1.5b-8k-reproduce-first-run-with-shuffle-8k-300-chkpt-step-100"
 
 model = AutoModelForCausalLM.from_pretrained(local_path)
 tokenizer = AutoTokenizer.from_pretrained(local_path)

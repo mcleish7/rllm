@@ -7,9 +7,13 @@ def prepare_math_data():
     train_dataset = load_dataset("agentica-org/DeepScaleR-Preview-Dataset", split="train")
     test_dataset = load_dataset("HuggingFaceH4/aime_2024", split="train")
 
-    easy_dataset = load_dataset("smcleish/error_at_k_saved_start_0_end_20000_num_completions_10", split="easy")
-    hard_dataset = load_dataset("smcleish/error_at_k_saved_start_0_end_20000_num_completions_10", split="hard")
-    random_dataset = load_dataset("smcleish/error_at_k_saved_start_0_end_20000_num_completions_10", split="random")
+    # easy_dataset = load_dataset("smcleish/error_at_k_saved_start_0_end_20000_num_completions_10", split="easy")
+    # hard_dataset = load_dataset("smcleish/error_at_k_saved_start_0_end_20000_num_completions_10", split="hard")
+    # random_dataset = load_dataset("smcleish/error_at_k_saved_start_0_end_20000_num_completions_10", split="random")
+
+    easy_dataset = load_dataset("smcleish/dapo_error_at_k_saved_start_0_end_14000_num_completions_10", split="easy")
+    hard_dataset = load_dataset("smcleish/dapo_error_at_k_saved_start_0_end_14000_num_completions_10", split="hard")
+    random_dataset = load_dataset("smcleish/dapo_error_at_k_saved_start_0_end_14000_num_completions_10", split="random")
 
     def preprocess_fn(example, idx):
         return {
@@ -28,9 +32,16 @@ def prepare_math_data():
     train_dataset = DatasetRegistry.register_dataset("deepscaler_math", train_dataset, "train")
     test_dataset = DatasetRegistry.register_dataset("aime2024", test_dataset, "test")
 
-    easy_dataset = DatasetRegistry.register_dataset("deepscaler_math_error_at_k_saved_start_0_end_20000_num_completions_10_easy", easy_dataset, "train")
-    hard_dataset = DatasetRegistry.register_dataset("deepscaler_math_error_at_k_saved_start_0_end_20000_num_completions_10_hard", hard_dataset, "train")
-    random_dataset = DatasetRegistry.register_dataset("deepscaler_math_error_at_k_saved_start_0_end_20000_num_completions_10_random", random_dataset, "train")
+    # easy_dataset = DatasetRegistry.register_dataset("deepscaler_math_error_at_k_saved_start_0_end_20000_num_completions_10_easy", easy_dataset, "train")
+    # hard_dataset = DatasetRegistry.register_dataset("deepscaler_math_error_at_k_saved_start_0_end_20000_num_completions_10_hard", hard_dataset, "train")
+    # random_dataset = DatasetRegistry.register_dataset("deepscaler_math_error_at_k_saved_start_0_end_20000_num_completions_10_random", random_dataset, "train")
+    # print(easy_dataset.get_data_path())
+    # print(hard_dataset.get_data_path())
+    # print(random_dataset.get_data_path())
+
+    easy_dataset = DatasetRegistry.register_dataset("dapo_error_at_k_saved_start_0_end_14000_num_completions_10_easy", easy_dataset, "train")
+    hard_dataset = DatasetRegistry.register_dataset("dapo_error_at_k_saved_start_0_end_14000_num_completions_10_hard", hard_dataset, "train")
+    random_dataset = DatasetRegistry.register_dataset("dapo_error_at_k_saved_start_0_end_14000_num_completions_10_random", random_dataset, "train")
     print(easy_dataset.get_data_path())
     print(hard_dataset.get_data_path())
     print(random_dataset.get_data_path())
